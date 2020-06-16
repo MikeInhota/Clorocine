@@ -52,7 +52,7 @@
           </div>
           <!-- Arquivo -->
           <div class="file-field input-field">
-            <div class="btn cyan lighten-3">
+            <div class="btn cyan accent-3">
               <span>Capa</span>
               <input type="file">
             </div>
@@ -63,7 +63,7 @@
           <!-- Fim Form -->
         </div>
         <div class="card-action">
-          <a href="galeria.php" class="waves-effect waves-light btn blue-grey darken-1">Cancelar</a>
+          <a href="galeria.php" class="waves-effect waves-light btn blue-grey darken-2">Cancelar</a>
           <a href="#" class="waves-effect waves-light btn cyan accent-4">Confirmar</a>
         </div>
       </div>
