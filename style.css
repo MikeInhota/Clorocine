@@ -5,7 +5,7 @@ body{
 .nav-extended{
     background-image: url("imagens/movieRetroCropped2.jpg");
     background-size: cover;
-    background-blend-mode: luminosity;
+    background-blend-mode: hard-light;
 }
 
 nav ul li.active, .tab a.active{

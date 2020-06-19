@@ -21,6 +21,7 @@
   </nav>
 
   <div class="row">
+  <form action="inserirFilme.php" method="POST">
     <div class="col s6 offset-s3">
       <div class="card">
         <div class="card-content">
@@ -28,7 +29,7 @@
           <!-- Inicio Form -->
           <div class="row">
             <div class="input-field col s12">
-              <input id="titulo" type="text" class="validate">
+              <input id="titulo" type="text" class="validate" name="titulo" required>
               <label for="titulo">Titulo do filme</label>
             </div>
           </div>
@@ -37,7 +38,7 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="sinopse" class="materialize-textarea"></textarea>
+                  <textarea id="sinopse" class="materialize-textarea" name="sinopse" required></textarea>
                   <label for="sinopse">Sinopse ...</label>
                 </div>
               </div>
@@ -46,7 +47,7 @@
           <!-- Nota -->
           <div class="row">
             <div class="input-field col s4">
-              <input id="nota" type="number" step=".1" min=0 max=10 class="validate" require>
+              <input id="nota" type="number" step=".1" min=0 max=10 class="validate" name="nota" require>
               <label for="nota">Nota</label>
             </div>
           </div>
@@ -57,17 +58,18 @@
               <input type="file">
             </div>
             <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+              <input class="file-path validate" type="text" name="poster" required>
             </div>
           </div>
           <!-- Fim Form -->
         </div>
         <div class="card-action">
           <a href="galeria.php" class="waves-effect waves-light btn blue-grey darken-2">Cancelar</a>
-          <a href="#" class="waves-effect waves-light btn cyan accent-4">Confirmar</a>
+          <button type="submit" class="waves-effect waves-light btn cyan accent-4">Confirmar</button>
         </div>
       </div>
     </div>
+  </form>
   </div>
 </body>
 
