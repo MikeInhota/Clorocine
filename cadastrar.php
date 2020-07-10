@@ -4,8 +4,8 @@
   <nav class="nav-extended cyan lighten-4">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
-        <li><a href="galeria.php">Galeria</a></li>
-        <li class="active"><a href="cadastrar.php">Cadastrar</a></li>
+        <li><a href="/">Galeria</a></li>
+        <li class="active"><a href="/novo">Cadastrar</a></li>
       </ul>
     </div>
     <div class="nav-header">
@@ -21,7 +21,7 @@
   </nav>
 
   <div class="row">
-  <form action="inserirFilme.php" method="POST">
+  <form method="POST">
     <div class="col s6 offset-s3">
       <div class="card">
         <div class="card-content">
@@ -38,7 +38,7 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="sinopse" class="materialize-textarea" name="sinopse" required></textarea>
+                  <textarea id="sinopse" class="materialize-textarea" name="sinopse"></textarea>
                   <label for="sinopse">Sinopse ...</label>
                 </div>
               </div>
@@ -58,7 +58,7 @@
               <input type="file">
             </div>
             <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" name="poster" required>
+              <input class="file-path validate" type="text" name="poster">
             </div>
           </div>
           <!-- Fim Form -->
