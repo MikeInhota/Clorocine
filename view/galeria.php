@@ -36,7 +36,7 @@ $filmes = $controller->index();
 
             <?php foreach($filmes as $filme) :?>
 
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 xl3">
                     <div class="card hoverable">
                         <div class="card-image">
                             <img src="<?= $filme->poster?>">

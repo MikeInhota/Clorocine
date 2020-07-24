@@ -7,7 +7,7 @@ class FilmesRepositoryPDO{
     private $conexao;
 
     public function _construct(){
-        $this->conexao = Conexao::criar();
+        $this-> conexao = Conexao::criar();
     }
 
     public function listarTodos():array{

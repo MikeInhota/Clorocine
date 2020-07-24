@@ -13,7 +13,7 @@ class FilmesController{
 
     public function save($request){
 
-        $filmesRepository = new $FilmesRepositoryPDO();
+        $filmesRepository = new FilmesRepositoryPDO();
         $filme = (object) $request;
 
         $upload = $this->savePoster($_FILES);
