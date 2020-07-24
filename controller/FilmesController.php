@@ -23,7 +23,7 @@ class FilmesController{
         }
 
         if ($filmesRepository->salvar($filme)) 
-            $_SESSION["msg"] = "Filme cadastrado com secesso";
+            $_SESSION["msg"] = "Filme cadastrado com sucesso";
         else
             $_SESSION["msg"] = "Erro ao cadastrar filme";
 

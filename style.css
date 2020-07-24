@@ -21,3 +21,7 @@ nav ul li.active, .tab a.active{
     opacity: 0;
     transition: 1s;
 }
+
+span{
+    font-weight: bolder;
+}

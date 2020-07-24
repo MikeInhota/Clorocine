@@ -38,26 +38,30 @@ $filmes = $controller->index();
 
                 <div class="col s12 m6 xl3">
                     <div class="card hoverable">
+
                         <div class="card-image">
-                            <img src="<?= $filme->poster?>">
+                            <img src="<?= $filme->poster?>" class="activator" />
                             <button class="btn-fav btn-floating halfway-fab waves-effect waves-light
                             teal accent-4" data-id="<?= $filme->id ?>">
                                 <i class="material-icons">
                                     <?= ($filme->favorito)?"favorite":"favorite_border" ?>
                                 </i></button>
                         </div>
+
                         <div class="card-content">
-                            <p class="valign-wrapper">
+                            <p class="valign-wrapper black-text">
                                 <i class="material-icons amber-text">star</i> <?= $filme->nota?>
                             </p>
-                            <span class="card-title"><?= $filme->titulo?></span>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4"><?= $filme->titulo?><i class="material-icons right">close</i></span>
-                                <p><?= substr($filme->sinopse, 0, 500)."..." ?></p>
-                                <a class="waves-effect waves-light btn-small orange accent-4 btn-delete" data-id="<?= $filme->id ?>">
-                                <i class="material-icons right">delete</i></a>
-                            </div>
+                            <span class="card-title activator black-text"><?= $filme->titulo?></span>
                         </div>
+
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><?= $filme->titulo?><i class="material-icons right">close</i></span>
+                            <p><?= substr($filme->sinopse, 0, 500)."..." ?></p>
+                                <a class="waves-effect waves-light btn-small deep-orange accent-3 btn-delete" data-id="<?= $filme->id ?>">
+                                <i class="material-icons right">delete</i> Delete</a>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -72,7 +76,7 @@ $filmes = $controller->index();
 // Evento Favoritar Filme
     document.querySelectorAll(".btn-fav").forEach(btn => {
         btn.addEventListener("click", e => {
-            const id = btn.getAttribube("data-id")
+            const id = btn.getAttribute("data-id")
             fetch(`/favoritar/${id}`)
             .then(response => response.json())
             .then(response => {
@@ -93,7 +97,7 @@ $filmes = $controller->index();
 // Evento Deletar Filme
     document.querySelectorAll(".btn-delete").forEach(btn => {
         btn.addEventListener("click", e => {
-            const id = btn.getAttribube("data-id")
+            const id = btn.getAttribute("data-id")
             const requestConfig = {method: "DELETE", headers: new Headers()}
             fetch(`/filmes/${id}`, requestConfig)
             .then(response => response.json())
